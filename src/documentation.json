@@ -1,0 +1,31 @@
+{
+    "Segment": {
+      "set-up-source": {
+        "title": "How to Set Up a New Source in Segment",
+        "link": "https://segment.com/docs/new-source",
+        "description": "Follow these steps to set up a new source in Segment..."
+      }
+    },
+    "mParticle": {
+      "create-user-profile": {
+        "title": "How to Create a User Profile in mParticle",
+        "link": "https://docs.mparticle.com/user-profile",
+        "description": "Learn how to create and manage user profiles in mParticle..."
+      }
+    },
+    "Lytics": {
+      "build-audience": {
+        "title": "How to Build an Audience in Lytics",
+        "link": "https://docs.lytics.com/audience-building",
+        "description": "Steps to create an audience segment in Lytics..."
+      }
+    },
+    "Zeotap": {
+      "data-integration": {
+        "title": "How to Integrate Data with Zeotap",
+        "link": "https://docs.zeotap.com/integration",
+        "description": "Instructions to integrate your data with Zeotap..."
+      }
+    }
+  }
+  

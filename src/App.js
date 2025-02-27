@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Toolbar from './components/Toolbar';
+import FormulaBar from './components/FormulaBar';
+import Spreadsheet from './components/Spreadsheet';
+// import Main from './Pages/Main';
+import Chatbot from './Pages/Chatbot';
 
 function App() {
+  const [data, setData] = useState(Array(10).fill(Array(10).fill('')));
+  const [formula, setFormula] = useState('');
+  const [activeCell, setActiveCell] = useState({ row: 0, col: 0 });
+
+  const handleCellChange = (e, row, col) => {
+    const newData = [...data];
+    newData[row][col] = e.target.value;
+    setData(newData);
+  };
+
+  const applyFormula = () => {
+    // Apply logic for formula evaluation here
+    // (e.g., SUM, AVERAGE, etc.)
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Chatbot />
     </div>
   );
 }
