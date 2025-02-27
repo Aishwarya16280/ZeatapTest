@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography, Paper, CircularProgress } from '@mui/material';
-
-// Import the search function from utils
-import { searchDocumentation } from '../utils/searchUtils';
-
-// Example documentation data (can also be imported from a separate JSON file)
-const documentationData = require('../documentation.json');
+import { searchDocumentation } from '../utils/searchUtils'; // Import the search function
+const documentationData = require('../documentation.json'); // Load documentation data
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -17,13 +13,9 @@ const Chatbot = () => {
       setMessages([...messages, { sender: 'user', text: userMessage }]);
       setUserMessage('');
       setLoading(true);
-
-      // Use the search function to find relevant documentation
       const botResponse = searchDocumentation(userMessage, documentationData);
-
-      // Simulate bot response with a delay
       setTimeout(() => {
-        setMessages((prevMessages) => [
+        setMessages(prevMessages => [
           ...prevMessages,
           { sender: 'bot', text: botResponse },
         ]);
@@ -33,8 +25,8 @@ const Chatbot = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 600, margin: '0 auto', padding: 2 }}>
-      <Paper sx={{ padding: 2, height: 400, display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ maxWidth: 1280, margin: '0 auto', padding: 2 }}>
+      <Paper sx={{ padding: 2, height: 800, display: 'flex', flexDirection: 'column'}}>
         <Box sx={{ flex: 1, overflowY: 'auto', marginBottom: 2 }}>
           {messages.map((msg, index) => (
             <Box
@@ -60,7 +52,7 @@ const Chatbot = () => {
           ))}
         </Box>
 
-        <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:"center" }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: "center" }}>
           <TextField
             fullWidth
             label="Ask your question"

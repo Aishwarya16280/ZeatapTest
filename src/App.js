@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Toolbar from './components/Toolbar';
-import FormulaBar from './components/FormulaBar';
-import Spreadsheet from './components/Spreadsheet';
+// import Toolbar from './components/Toolbar';
+// import FormulaBar from './components/FormulaBar';
+// import Spreadsheet from './components/Spreadsheet';
 // import Main from './Pages/Main';
 import Chatbot from './Pages/Chatbot';
 
